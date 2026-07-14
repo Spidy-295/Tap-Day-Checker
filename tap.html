@@ -5,56 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tap Day</title>
 
-    <style>
-
-        *{
-            /* margin: 0;
-            padding: 0; */
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #00bfff;
-            background: linear-gradient(45deg,#fff, #00bfff, #003cff);
-
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .card {
-            /* border: 2px solid #fff; */
-            background: #000000;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            width: 350px;
-        }
-
-        input, button {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-        }
-
-        button {
-            background: #00fbff;
-            border: none;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        #result {
-            margin-top: 15px;
-            font-size: 25px;
-        }
-
-    </style>
-
 </head>
 
 <body>
@@ -69,37 +19,6 @@
 
         
     </div>
-
-
-    <script>
-
-        const dateInput = document.getElementById("date");
-
-        // Set today's date automatically
-        const today = new Date().toISOString().split("T")[0];
-        dateInput.value = today;
-
-        function checkLight() {
-            const result = document.getElementById("result");
-
-            const startDate = new Date("2026-01-02"); // Light ON reference
-            const selectedDate = new Date(dateInput.value);
-
-            const diffTime = selectedDate - startDate;
-            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
-            if (diffDays % 2 === 0) {
-                result.innerHTML = "💦 Yes, It's Water Day";
-                result.style.color = "lime";
-            } 
-            
-            else {
-                result.innerHTML = "❌ Not a Water Day";
-                result.style.color = "red";
-            }
-        }
-
-    </script>
 
 </body>
 </html>
