@@ -1,0 +1,138 @@
+  *{
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+  }
+
+	.container{
+	  width: 100%;
+	  height: 100vh;
+	  
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  overflow: hidden;
+	}
+	
+	.card{
+	  width: 400px;
+	  max-width: 80%;
+	  height: 450px;
+	  background: rgba(255,255,255,0.3);
+	  color: white;
+	  text-align: center;
+	  padding: 10px;
+	  border-radius: 25px;
+	  transition: 0.7;
+	  border: 1.5px solid rgba(255,255,255,0.8);
+	  /*border-top: 1px solid rgba(255,255,255,0.8);*/
+	  backdrop-filter: blur(5px);
+	}
+	
+	.head{
+	  padding: 130px 0 0 0px;
+	  font-size: 80px;
+	  opacity: 0.5;
+	}
+	
+	img{
+	  margin-top: 15px;
+	  border-radius: 5%;
+	  height: 305px;
+	  width: 253px;
+	}
+	
+	.text{
+	  padding-top: 5px;
+	}
+	
+	.para{
+	  padding-top: 5px;
+	}
+	
+	i{
+	  padding: 5px 15px;
+	  font-size: 25px;
+	  z-index: 0;
+	}
+	
+	.content{
+	  transform: translateY(100px);
+	  opacity: 0;
+	  transition: 1s;
+  } 
+	
+	.card:hover .content{
+	  transform: translateY(0px);
+	  opacity: 1;
+	}
+	
+	.card:hover .head{
+	  display: none;
+	}
+	
+	
+	@media(max-width: 1400px){
+	  .card{
+	    width: 800px;
+	    max-width: 80%;
+	    height: 800px;
+	    font-size: 36px;
+	  }
+	  
+	  .card:hover .head{
+	    display: block;
+	  }
+	  .para{
+	    padding: 10px 10px 10px;
+	  }
+	  
+	  .card{
+	    z-index: 1;
+	  }
+	  
+	}
+	
+	@media(max-width: 768px){
+	  .card{
+  	  width: 400px;
+  	  max-width: 80%;
+  	  height: 450px;
+  	  font-size: 16px;
+	  }
+	  
+	  .card:hover .head{
+	    display: none;
+	  }
+	}
+	
+	body{
+	  background: black;
+	}
+	
+	body::before{
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  
+	background: linear-gradient(90deg, red, purple, blue);
+	clip-path: circle(25% at left 85%);
+	z-index: 0;
+	}
+	
+		body::after{
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  
+	background: linear-gradient(blue, pink);
+	clip-path: circle(30% at right 20%);
+	z-index: 0;
+	}
+	
